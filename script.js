@@ -544,6 +544,7 @@ const seleccionados = [];
 let logo1 = "", logo2 = "";
 
 document.addEventListener("DOMContentLoaded", () => {
+    // Rellenar select de docentes
     const selDocente = document.getElementById("docente");
     docentes.forEach(doc => {
         const opt = document.createElement("option");
@@ -552,16 +553,17 @@ document.addEventListener("DOMContentLoaded", () => {
         selDocente.appendChild(opt);
     });
 
+    // Rellenar lista de estudiantes
     const listaEst = document.getElementById("listaEstudiantes");
     estudiantes.forEach(est => {
         const opt = document.createElement("option");
-        opt.value = `${est.nombre} - ${est.dni}`;
+        opt.value = `${est.nombre} - ${est.dni}`;  // 👈 nombre ya viene como "APELLIDO NOMBRE"
         listaEst.appendChild(opt);
     });
 
-    // ✅ Reemplazado con rutas absolutas
-    cargarLogo("https://leonardomaytan.github.io/2025-SEC-JG-INCIDENCIAS/img/logo-jg.png", b64 => logo1 = b64);
-    cargarLogo("https://leonardomaytan.github.io/2025-SEC-JG-INCIDENCIAS/img/logo-sec.png", b64 => logo2 = b64);
+
+    cargarLogo("img/logo1.png", b64 => logo1 = b64);
+    cargarLogo("img/logo2.png", b64 => logo2 = b64);
 });
 
 function cargarLogo(url, callback) {
@@ -697,4 +699,5 @@ const contador = document.getElementById("contador");
 descripcionInput.addEventListener("input", () => {
     contador.textContent = `${descripcionInput.value.length} / 190`;
 });
+
 
