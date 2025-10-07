@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ficha de Derivación</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Iconos y PWA -->
+  <link rel="icon" type="image/png" sizes="32x32" href="img/logo4.png">
+  <link rel="apple-touch-icon" href="img/logo4.png">
+  <link rel="manifest" href="img/site.webmanifest">
+  <meta name="theme-color" content="#007bff">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container bg-white shadow-lg p-4 mt-4 mb-5 rounded">
+    <header class="text-center mb-4">
+      <div class="d-flex justify-content-between align-items-center flex-wrap mb-3 logos">
+        <img src="img/logo1.png" alt="Logo 1" class="img-fluid">
+        <img src="img/logo2.png" alt="Logo 2" class="img-fluid">
+        <img src="img/logo3.png" alt="Logo 3" class="img-fluid">
+        <img src="img/logo4.png" alt="Logo 4" class="img-fluid">
+      </div>
+      <h6 class="text-primary fw-semibold">"AÑO DE LA RECUPERACIÓN Y CONSOLIDACIÓN DE LA ECONOMÍA PERUANA"</h6>
+      <h1 class="h4 fw-bold text-uppercase mt-2">Ficha de Derivación</h1>
+    </header>
+
+    <form id="fichaForm" class="row g-3">
+      <div class="col-md-6">
+        <label for="estudiante" class="form-label">Estudiante:</label>
+        <select id="estudiante" class="form-select" required>
+          <option value="">Seleccione un estudiante</option>
+        </select>
+      </div>
+
+      <div class="col-md-3">
+        <label for="dni" class="form-label">DNI:</label>
+        <input type="text" id="dni" class="form-control" readonly required>
+      </div>
+
+      <div class="col-md-3">
+        <label for="edad" class="form-label">Edad:</label>
+        <input type="number" id="edad" class="form-control" readonly required>
+      </div>
+
+      <div class="col-md-6">
+        <label for="aula" class="form-label">Aula:</label>
+        <input type="text" id="aula" class="form-control" readonly required>
+      </div>
+
+      <div class="col-md-6">
+        <label for="derivadaPor" class="form-label">Derivada por:</label>
+        <select id="derivadaPor" class="form-select" required>
+          <option value="">Seleccione un docente</option>
+        </select>
+      </div>
+
+      <div class="col-12">
+        <fieldset class="p-3 border rounded">
+          <legend class="fw-bold">I. Dificultad Observada (marque al menos una)</legend>
+          <div class="row">
+            <div class="col-md-4 col-6">
+              <label><input type="checkbox" name="dificultad" value="Conductual"> Conductual</label>
+            </div>
+            <div class="col-md-4 col-6">
+              <label><input type="checkbox" name="dificultad" value="Social"> Social</label>
+            </div>
+            <div class="col-md-4 col-6">
+              <label><input type="checkbox" name="dificultad" value="Académico"> Académico</label>
+            </div>
+            <div class="col-md-4 col-6">
+              <label><input type="checkbox" name="dificultad" value="Familiar"> Familiar</label>
+            </div>
+            <div class="col-md-4 col-6">
+              <label><input type="checkbox" name="dificultad" value="Emocional"> Emocional</label>
+            </div>
+            <div class="col-md-4 col-6">
+              <label><input type="checkbox" name="dificultad" value="Personalidad"> Personalidad</label>
+            </div>
+            <div class="col-md-6 mt-2">
+              <label><input type="checkbox" name="dificultad" value="Otros"> Otros</label>
+              <input type="text" id="otrosTexto" class="form-control form-control-sm mt-1" placeholder="Especifique otros...">
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="col-md-6">
+        <label for="rendimiento" class="form-label">II. Rendimiento académico:</label>
+        <select id="rendimiento" class="form-select" required>
+          <option value="">Seleccione</option>
+          <option value="Bueno">Bueno</option>
+          <option value="Regular">Regular</option>
+          <option value="Malo">Malo</option>
+        </select>
+      </div>
+
+      <div class="col-12">
+        <label for="dificultadArea" class="form-label">La mayor dificultad se presenta en:</label>
+        <textarea id="dificultadArea" class="form-control" required></textarea>
+      </div>
+
+      <div class="col-12">
+        <label for="descripcion" class="form-label">III. Descripción de la dificultad:</label>
+        <textarea id="descripcion" class="form-control" required></textarea>
+      </div>
+
+      <div class="col-12">
+        <label for="desdeCuando" class="form-label">IV. ¿Desde cuándo se presenta la dificultad?</label>
+        <textarea id="desdeCuando" class="form-control" required></textarea>
+      </div>
+
+      <div class="col-md-6">
+        <label for="conversoPadres" class="form-label">V. ¿Conversó con los padres?</label>
+        <select id="conversoPadres" class="form-select" required>
+          <option value="">Seleccione</option>
+          <option value="Sí">Sí</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+
+      <div class="col-12">
+        <label for="observaciones" class="form-label">Observaciones adicionales:</label>
+        <textarea id="observaciones" class="form-control"></textarea>
+      </div>
+
+      <div class="col-12">
+        <label for="acciones" class="form-label">VI. Acciones realizadas ante el caso:</label>
+        <textarea id="acciones" class="form-control" required></textarea>
+      </div>
+
+      <div class="text-center mt-4">
+        <button type="submit" class="btn btn-primary px-4 py-2 fw-bold">Generar PDF</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="mt-5 py-4 text-center bg-light border-top">
+    <div class="container">
+      <p><strong>Dirección:</strong> Jr. Francisco Bolognesi 4 cuadra N°436</p>
+      <p><strong>Teléfono:</strong> <a href="tel:+51964073785">964 073 785</a> |
+        <strong>Email:</strong> <a href="mailto:leonmaytan@gmail.com">leonmaytan@gmail.com</a>
+      </p>
+      <div class="footer-social d-flex justify-content-center flex-wrap gap-3 mt-2">
+        <a href="https://wa.me/qr/A7IPPXNTP7RNE1" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="icon-square"></a>
+        <a href="https://www.facebook.com/share/1HtpuXBqeD/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Facebook_Logo.png" alt="Facebook" class="icon-square"></a>
+        <a href="https://www.instagram.com/leonmaytan" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" class="icon-square"></a>
+        <a href="https://www.tiktok.com/@leonardomaytan" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok" class="icon-square"></a>
+        <a href="https://youtube.com/@leonmaytan" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube" class="icon-rect"></a>
+      </div>
+      <p class="footer-copy mt-3 text-muted">&copy; 2025 Leonardo David Maytan Quispe - Ingeniero de Sistemas</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="datos.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
