@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     drawLine(43, y + 0.5, 125);
     doc.text(derivadaPor || "", 45, y);
 
-    y += 8;
+    y += 10;
     doc.setFont("helvetica", "bold");
     doc.text("I. Dificultad observada:", 15, y);
     doc.setFont("helvetica", "normal");
@@ -185,28 +185,28 @@ document.addEventListener("DOMContentLoaded", async () => {
     const dificultadTexto = dificultades.join(", ") || "_______________________________________";
     y = addMultilineText(doc, dificultadTexto, 20, y, 170);
 
-    y += 4;
+    y += 10;
     doc.setFont("helvetica", "bold");
     doc.text("II. Rendimiento académico:", 15, y);
     doc.setFont("helvetica", "normal");
     doc.text(rendimiento || "", 75, y);
 
-    y += 6;
+    y += 10;
     doc.text("La mayor dificultad se presenta en:", 15, y);
     y = addMultilineText(doc, dificultadArea, 20, y + 5, 170);
 
-    y += 3;
+    y += 10;
     doc.setFont("helvetica", "bold");
     doc.text("III. Descripción de la dificultad:", 15, y);
     y = addMultilineText(doc, descripcion, 20, y + 5, 170);
 
-    y += 3;
+    y += 10;
     doc.setFont("helvetica", "bold");
     doc.text("IV. ¿Desde cuándo se presenta la dificultad?", 15, y);
     y = addMultilineText(doc, desdeCuando, 20, y + 5, 170);
 
     // === Conversación con padres ===
-    y += 3;
+    y += 10;
     doc.setFont("helvetica", "bold");
     doc.text("V. ¿Conversó con los padres de familia?:", 15, y);
     doc.setFont("helvetica", "normal");
@@ -223,14 +223,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     y = addMultilineText(doc, observaciones, 20, y + 5, 170);
 
     // === Acciones ===
-    y += 3;
+    y += 10;
     doc.setFont("helvetica", "bold");
     doc.text("VI. Acciones realizadas ante el caso:", 15, y);
     doc.setFont("helvetica", "normal");
     y = addMultilineText(doc, acciones, 20, y + 5, 170);
 
     // === Firma ===
-    y += 25;
+    y += 50;
     doc.line(75, y, 135, y);
     doc.text("Docente Derivante", 90, y + 5);
 
