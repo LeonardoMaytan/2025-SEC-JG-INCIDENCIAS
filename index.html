@@ -34,25 +34,29 @@
     <form id="fichaForm" class="row g-3">
       <div class="col-md-6">
         <label for="estudiante" class="form-label">Estudiante:</label>
-        <input class="form-control" list="estudiantesList" id="estudiante" placeholder="Buscar estudiante..." required>
-        <datalist id="estudiantesList"></datalist>
+        <select id="estudiante" class="form-select" >
+          <option value="">Seleccione un estudiante</option>
+        </select>
       </div>
 
-
+      <div class="col-md-3">
+        <label for="dni" class="form-label">DNI:</label>
+        <input type="text" id="dni" class="form-control" readonly >
+      </div>
 
       <div class="col-md-3">
         <label for="edad" class="form-label">Edad:</label>
-        <input type="number" id="edad" class="form-control" readonly required>
+        <input type="number" id="edad" class="form-control" readonly >
       </div>
 
       <div class="col-md-6">
         <label for="aula" class="form-label">Aula:</label>
-        <input type="text" id="aula" class="form-control" readonly required>
+        <input type="text" id="aula" class="form-control" readonly >
       </div>
 
       <div class="col-md-6">
         <label for="derivadaPor" class="form-label">Derivada por:</label>
-        <select id="derivadaPor" class="form-select" required>
+        <select id="derivadaPor" class="form-select" >
           <option value="">Seleccione un docente</option>
         </select>
       </div>
@@ -89,7 +93,7 @@
 
       <div class="col-md-6">
         <label for="rendimiento" class="form-label">II. Rendimiento académico:</label>
-        <select id="rendimiento" class="form-select" required>
+        <select id="rendimiento" class="form-select" >
           <option value="">Seleccione</option>
           <option value="Bueno">Bueno</option>
           <option value="Regular">Regular</option>
@@ -99,30 +103,26 @@
 
       <div class="col-12">
         <label for="dificultadArea" class="form-label">La mayor dificultad se presenta en:</label>
-        <textarea id="dificultadArea" class="form-control" required></textarea>
+        <textarea id="dificultadArea" class="form-control" ></textarea>
       </div>
 
       <div class="col-12">
         <label for="descripcion" class="form-label">III. Descripción de la dificultad:</label>
-        <textarea id="descripcion" class="form-control" required></textarea>
+        <textarea id="descripcion" class="form-control" ></textarea>
       </div>
 
       <div class="col-12">
         <label for="desdeCuando" class="form-label">IV. ¿Desde cuándo se presenta la dificultad?</label>
-        <textarea id="desdeCuando" class="form-control" required></textarea>
+        <textarea id="desdeCuando" class="form-control" ></textarea>
       </div>
 
       <div class="col-md-6">
         <label for="conversoPadres" class="form-label">V. ¿Conversó con los padres?</label>
-        <select id="conversoPadres" class="form-select" required>
+        <select id="conversoPadres" class="form-select" >
           <option value="">Seleccione</option>
           <option value="Sí">Sí</option>
           <option value="No">No</option>
         </select>
-      </div>
-      <div class="col-md-6" id="fechaConversacionContainer">
-        <label for="fechaConversacion" class="form-label">Fecha de conversación con padres:</label>
-        <input type="date" id="fechaConversacion" class="form-control">
       </div>
 
       <div class="col-12">
@@ -132,7 +132,7 @@
 
       <div class="col-12">
         <label for="acciones" class="form-label">VI. Acciones realizadas ante el caso:</label>
-        <textarea id="acciones" class="form-control" required></textarea>
+        <textarea id="acciones" class="form-control" ></textarea>
       </div>
 
       <div class="text-center mt-4">
@@ -165,3 +165,4 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
