@@ -34,15 +34,11 @@
     <form id="fichaForm" class="row g-3">
       <div class="col-md-6">
         <label for="estudiante" class="form-label">Estudiante:</label>
-        <select id="estudiante" class="form-select" required>
-          <option value="">Seleccione un estudiante</option>
-        </select>
+        <input class="form-control" list="estudiantesList" id="estudiante" placeholder="Buscar estudiante..." required>
+        <datalist id="estudiantesList"></datalist>
       </div>
 
-      <div class="col-md-3">
-        <label for="dni" class="form-label">DNI:</label>
-        <input type="text" id="dni" class="form-control" readonly required>
-      </div>
+
 
       <div class="col-md-3">
         <label for="edad" class="form-label">Edad:</label>
@@ -124,6 +120,10 @@
           <option value="No">No</option>
         </select>
       </div>
+      <div class="col-md-6" id="fechaConversacionContainer">
+        <label for="fechaConversacion" class="form-label">Fecha de conversación con padres:</label>
+        <input type="date" id="fechaConversacion" class="form-control">
+      </div>
 
       <div class="col-12">
         <label for="observaciones" class="form-label">Observaciones adicionales:</label>
@@ -165,4 +165,3 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
